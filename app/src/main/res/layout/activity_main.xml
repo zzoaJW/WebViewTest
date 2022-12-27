@@ -23,24 +23,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bar_background" />
 
-    <TextView
-        android:id="@+id/link"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:text="링크"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/bar_background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btn_refresh"
         android:layout_width="150sp"
         android:layout_height="wrap_content"
-        android:background="#FFFFFFFFF"
+        android:background="#00000000"
         android:text="새로고침"
         app:layout_constraintBottom_toBottomOf="@+id/bar_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_link_copy"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:text="링크 복사"
+        app:layout_constraintBottom_toBottomOf="@+id/bar_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
