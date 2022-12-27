@@ -17,5 +17,17 @@ class MainActivity : AppCompatActivity() {
         binding.webView.webViewClient = WebViewClient()
         binding.webView.settings.javaScriptEnabled = true
         binding.webView.loadUrl("https://www.naver.com/")
+
+        binding.btnBack.setOnClickListener {
+            binding.webView.goBack()
+        }
+
+        binding.btnFront.setOnClickListener {
+            binding.webView.goForward()
+        }
+
+        binding.btnRefresh.setOnClickListener {
+            binding.webView.reload()
+        }
     }
 }
