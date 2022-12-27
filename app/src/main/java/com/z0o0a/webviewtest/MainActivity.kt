@@ -1,9 +1,12 @@
 package com.z0o0a.webviewtest
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebViewClient
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.z0o0a.webviewtest.databinding.ActivityMainBinding
 
@@ -27,6 +30,14 @@ class MainActivity : AppCompatActivity() {
             binding.webViewLayout.isRefreshing = false
         }
 
+        val clipboard = getSystemService(CLIPBOARD_SERVICE) as ClipboardManager
+
+        binding.btnLinkCopy.setOnClickListener {
+            val clip = ClipData.newPlainText("copy_url", binding.webView.url)
+            clipboard.setPrimaryClip(clip)
+
+            Toast.makeText(this, binding.webView.url, Toast.LENGTH_SHORT).show()
+        }
 
         binding.btnBack.setOnClickListener {
             binding.webView.goBack()
