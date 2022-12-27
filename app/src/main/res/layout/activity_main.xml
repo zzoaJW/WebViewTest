@@ -60,6 +60,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/web_view_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +68,7 @@
         app:layout_constraintTop_toBottomOf="@+id/bar_background">
 
         <WebView
-            android:id="@+id/webView"
+            android:id="@+id/web_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
